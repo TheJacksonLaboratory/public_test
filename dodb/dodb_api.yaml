@@ -1,0 +1,102 @@
+swagger: '2.0'
+info:
+  description: 'Diversity Outbred Database APIs'
+  version: 1.0.0
+  title: dodb APIs
+host: dodb.jax.org
+schemes:
+  - https
+paths:
+  /dodb/api/:
+    get:
+      summary: View Diversity Database end points
+      operationId: View diversity database end points
+      description: View a diversity database  end points
+      produces:
+         - application/json
+      responses:
+        '200':
+          description: Success
+  /dodb/api/investigators:
+    get:
+      summary: Get investigators
+      operationId: Get investigators
+      description: Get investigators information.
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Success
+  /dodb/api/projects:
+    get:
+      summary: Get projects
+      operationId: Get projects
+      description: Get projects.
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Success
+  /dodb/api/project:
+    get:
+      summary: Get project
+      operationId: Get project
+      description: Get project.
+      parameters:
+        - in: query
+          name: id
+          type: integer
+          required: true
+          description: Project ID to get.
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Success          
+  /dodb/api/all_phenotype_studies:
+    get:
+      summary: Get phenotype studies
+      operationId: Get phenotype studies
+      description: Get phenotype studies.
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Success
+  /dodb/api/all_publications:
+    get:
+      summary: Get all publications
+      operationId: Get all publications
+      description: Get all publications.
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Success
+  /dodb/api/all_authors:
+    get:
+      summary: Get all authors
+      operationId: Get all authors
+      description: Get all authors.
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Success
+  /dodb/api/ping:
+    get:
+      summary: ping API
+      operationId: ping API
+      description: ping API.
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Success          
+definitions:
+  request-body:
+    properties:
+      replace-me:
+        type: object
+        description: 'Replace with request payload in application/json, application/x-www-form-urlencoded, or application/xml format.'
+
